@@ -6,7 +6,7 @@ export class LegacyInventoryAdapter extends ECommerceSystem {
     super();
   }
 
-  integrateLegacyData() {
+  public integrateLegacyData() {
     const legacyProductCode = this.legacyInventorySystem.getProductCode();
     const legacyProductName = this.legacyInventorySystem.getProductName();
     const legacyStock = this.legacyInventorySystem.getStock();

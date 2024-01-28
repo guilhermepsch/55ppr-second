@@ -5,15 +5,15 @@ export class Department implements Component {
 
   constructor(private name: string) {}
 
-  add(component: Component): void {
+  public add(component: Component): void {
     this.children.push(component);
   }
 
-  getName(): string {
+  public getName(): string {
     return this.name;
   }
 
-  display(): string {
+  public display(): string {
     let result = 'Department: ' + this.name + ';';
 
     for (const child of this.children) {

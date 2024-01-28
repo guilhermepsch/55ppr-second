@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import AdapterClient from './patterns/adapter/AdapterClient';
 import CompositeClient from './patterns/composite/CompositeClient';
 import DecoratorClient from './patterns/decorator/DecoratorClient';
+import StateClient from './patterns/state/StateClient';
 
 function App() {
 	return (
@@ -10,7 +11,7 @@ function App() {
 			<NavBar />
 			<Routes>
 				<Route path="/adapter" element={<AdapterClient />} />
-				<Route path="/state" element={<></>} />
+				<Route path="/state" element={<StateClient />} />
 				<Route path="/composite" element={<CompositeClient />} />
 				<Route path="/visitor" element={<></>} />
 				<Route path="/decorator" element={<DecoratorClient />} />

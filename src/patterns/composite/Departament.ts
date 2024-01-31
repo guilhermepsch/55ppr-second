@@ -1,3 +1,4 @@
+// Department.ts
 import { Component } from "./Component";
 
 export class Department implements Component {
@@ -5,8 +6,15 @@ export class Department implements Component {
 
   constructor(private name: string) {}
 
-  public add(component: Component): void {
-    this.children.push(component);
+  public add(subscription: Component): void {
+    this.children.push(subscription);
+  }
+
+  public remove(subscription: Component): void {
+    const index = this.children.indexOf(subscription);
+    if (index !== -1) {
+      this.children.splice(index, 1);
+    }
   }
 
   public getName(): string {

@@ -1,27 +1,25 @@
-import { Lion } from './Lion';
-import { Elephant } from './Elephant';
-import { Giraffe } from './Giraffe';
-import { ZooVisitor } from './ZooVisitor';
+import { MonthlySubscription } from './MonthlySubscription';
+import { YearlySubscription } from './YearlySubscription';
+import { SubscriptionAnalyticsVisitor } from './SubscriptionAnalyticsVisitor';
 
 export default function VisitorClient() {
-	const lion = new Lion();
-	const elephant = new Elephant();
-	const giraffe = new Giraffe();
-	const zooVisitor = new ZooVisitor();
+	const monthlySubscription = new MonthlySubscription();
+	const yearlySubscription = new YearlySubscription();
+	const analyticsVisitor = new SubscriptionAnalyticsVisitor();
 
-	lion.accept(zooVisitor);
-	elephant.accept(zooVisitor);
-	giraffe.accept(zooVisitor);
+	monthlySubscription.accept(analyticsVisitor);
+	yearlySubscription.accept(analyticsVisitor);
 
 	return (
 		<div className="bg-black text-white p-4">
-			<h2 className="text-2xl font-bold">Zoo Visitor Pattern</h2>
+			<h2 className="text-2xl font-bold">Subscription Visitor Pattern</h2>
 			<p className="text-lg">
 				O padrão Visitor é usado neste exemplo fictício para realizar
-				diferentes operações em animais no zoológico, como alimentação,
-				limpeza e tirar fotos. Temos três tipos de animais: leões,
-				elefantes e girafas. O visitante do zoológico visita cada animal
-				e executa operações específicas para cada tipo.{' '}
+				diferentes operações de análise em diferentes tipos de
+				assinaturas. As assinaturas mensais e anuais são visitadas por
+				um visitante de análise, que realiza operações diferentes em
+				cada uma delas. Que são operações relacionadas a histórico e
+				analytics{' '}
 				<strong>
 					A saída do console mostra o resultado da visita.
 				</strong>

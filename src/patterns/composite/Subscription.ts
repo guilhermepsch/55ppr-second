@@ -1,6 +1,7 @@
+// Subscription.ts
 import { Component } from "./Component";
 
-export class Employee implements Component {
+export class Subscription implements Component {
   constructor(private name: string) {}
 
   public getName(): string {
@@ -8,6 +9,6 @@ export class Employee implements Component {
   }
 
   public display(): string {
-    return 'Employee: ' + this.name + ';';
+    return 'Subscription: ' + this.name + ';';
   }
 }
